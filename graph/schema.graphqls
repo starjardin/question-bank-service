@@ -1,0 +1,40 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+scalar Date
+
+type Question {
+	title: String!
+	id: ID!
+	user: User
+	withResponse: Boolean
+	response: String!
+	createdAt: Date
+	lastModifiedAt: Date
+}
+
+type User {
+	id: ID!
+	email: String
+	name: String!
+}
+
+input NewQuestion {
+	title: String!
+	response: String!
+	userId: String
+	createdAt: Date
+	lastModifiedAt: Date
+}
+
+# // Queries go here
+type Query {
+	question(_id: String!): Question!
+	questions: [Question!]!
+}
+
+# // Mutations go here
+# TODO: Add more mutations for editing questions (probably same with users - adding and editing)
+type Mutation {
+	createQuestion(input: NewQuestion!): Question!
+}
