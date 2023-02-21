@@ -3,7 +3,7 @@
 ## How to contribute
 
 ### Clone the project
-1. run `git clone git@github.com:<your-github-username>/question-bank-service.git
+1. run `git clone git@github.com:<your-github-username>/question-bank-service.git`
 2. `cd question-bank-service`
 
 ### Running the project locally
